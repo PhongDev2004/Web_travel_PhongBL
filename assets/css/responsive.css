@@ -1,0 +1,143 @@
+/* mobile & tablet */
+@media (max-width: 1060px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .row{
+        margin: 0;
+    }
+    .col{
+        padding: 0;
+    }
+    .container__tickets{
+        margin: 10px 4px;
+    }
+    .top-review__user-item{
+        width: unset;
+        margin: 4px 8px;
+    }
+    .mobile-tablet-lim-width{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+        margin: 0;
+    }
+    .container__team-img,
+    .container__tickets,
+    .container__tickets{
+        flex-shrink: 0;
+    }
+    .footer-order{
+        order: 4;
+    }
+    .mobile-header{
+        display: flex;
+        position: fixed;
+        padding-top: 4px;
+        top: 0;
+        right: 0;
+        left: 0;
+    }   
+    
+    .footer__wrap{
+        margin-top: 10px;
+    }
+    .cart-right {
+        display: none;
+    }
+    
+}
+
+@media (min-width:1023px) and (max-width: 1260px){
+    .mobile-tablet-lim-width{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+        margin: 0;
+    }
+    .container-resort__city{
+        zoom: 0.8;
+    }
+    .footer-order{
+        order: 4;
+    }
+}
+/* tablet */
+@media (min-width: 740px) and (max-width:1023px){
+    
+    :root{
+        --header-height: 68px;
+    }
+    .hide-on-tablet{
+        display: none;
+    }
+    .slide-banner__text{
+        zoom: 0.8;
+    }
+    .container__video-wrap2{
+        height: 344px;
+    }
+    .cart-right {
+        position: fixed;
+        top: 12%;
+        right: -66px;
+    }
+    
+    .favourite-oder-tablet{
+        order: 1;
+    }
+    .container-resort__city{
+        zoom: 0.6;
+    }
+}
+
+/* mobile */
+@media (max-width: 739px){
+    :root{
+        --header-height: 58px;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .container-text__wrap{
+        zoom: 0.5;
+    }
+    .slide-banner__text{
+        zoom: 0.4;
+    }
+    
+    .container__top-review{
+        height: 400px;
+    }
+    .container__video-wrap2{
+        height: 200px;
+    }
+    .top-review__user-item{
+        zoom: 0.8;
+    }
+    .next-wrap__btn{
+        display: none;
+    }
+    
+    .container-resort__city{
+        zoom: 0.5;
+        margin-bottom: 60px;
+    }
+    .mobile-tablet__form{
+        zoom: 0.9;
+    }
+    .footer__wrap-text,
+    .footer__logo-contact,
+    .footer__wrap-link-text,
+    .footer__wrap-description,
+    .footer__wrap-date,
+    .footer__wrap-title{
+        text-align: center;
+        justify-content: center;
+    }
+    .form-wrap{
+        width: 95%;
+    }
+}

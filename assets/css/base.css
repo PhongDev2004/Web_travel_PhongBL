@@ -1,0 +1,237 @@
+:root{
+    --primary-color: rgb(63, 208, 212);
+    --white-color:#ffffff;
+    --text-color:#212121;
+    --text-small-color:rgb(105, 104, 104);
+    --header-height: 78px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+body{
+    overflow-y: auto;
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: linear-gradient(70deg,var(--primary-color), rgb(247, 47, 170));
+}
+@media (min-width: 1061px){
+    ::-webkit-scrollbar{
+        width: 12px;
+        height: 0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
+}
+
+
+
+@keyframes appear{
+  
+    0%{
+        transform: translateY(-10%);
+        opacity: 0;
+        transform: scaleY(0.5);
+    }
+    100%{
+        
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes zoom-img{
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(101%);
+    }
+}
+
+@keyframes text-slide{
+   
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+        transform: scale(90%);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }100%{
+        opacity: 0;
+    }
+    
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.user-info__body-name::after,
+.ticket-title::after,
+.ticket-label__location::after,
+.all__link::after,
+.all__link-lv3::after,
+.header-item__text::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(237, 164, 240);
+    transition: width 0.2s ease-out;
+    z-index: 99;
+}
+
+.top-review__user-item:hover .user-info__body-name::after,
+.ticket-title:hover::after,
+.all__item:hover .all__link::after,
+.all__item-lv3:hover .all__link-lv3::after,
+.header-item__text:hover::after{
+    width: 100%;
+    background-color: var(--primary-color);
+    transition: width ease-out 0.2s, background-color ease-in 0.3s;
+}
+
+/* phần container-text */
+
+.container-text__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    margin: auto;
+    padding: 100px 0px 48px;
+}
+.container-text__title-extra{
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Satisfy', cursive;
+    color: var(--primary-color);
+    line-height: 6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container-text__title-main{
+    display: block;
+    width: 100%;
+    font-size: 6.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: capitalize;
+    line-height: 8rem;
+    text-align: center;
+}
+.container-text__description{
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-small-color);
+    line-height: 2.2rem;
+    overflow: hidden;
+    text-align: center;
+    margin: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.footer__powered-link::selection,
+.footer__powered span::selection,
+.footer__wrap-date::selection,
+.footer__wrap-description::selection,
+.footer__wrap-title::selection,
+.footer__wrap-link-text::selection,
+.footer__wrap-text::selection,
+.container__place-item__description::selection,
+.container__place-item__title::selection,
+.container-text__description::selection,
+.container-text__title-main::selection,
+.container-text__title-extra::selection{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* phần nút tròn page */
+.container__page{
+    margin: auto;
+    user-select: none;
+}
+.page__btn{
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    margin: 20px 12px;
+    cursor: pointer;
+    background-color: #9fe7e9;
+}
+.btn--light,
+.page__btn:hover{
+    background-color: var(--primary-color);
+}
